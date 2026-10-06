@@ -11,6 +11,7 @@ import { projects } from '../data/projects.js'
 import { posts } from '../data/blog.js'
 import { focus, areas } from '../data/content.js'
 import { GITHUB } from '../data/socialLinks.js'
+import { CONTACT_EMAIL, CONTACT_MAILTO } from '../data/contact.js'
 export default function Home() {
   return (<>
     <Seo />
@@ -32,7 +33,7 @@ export default function Home() {
     <section className="section container"><div className="cta">
       <h2>Build something with us.</h2>
       <p className="lead">Contributions include {areas.map(a => a[0].toLowerCase()).slice(0, 7).join(', ')} and community participation.</p>
-      <Link to="/contribute" className="btn primary">Start Contributing</Link></div></section>
+      <div className="row gap wrap"><Link to="/contribute" className="btn primary">Start Contributing</Link><a href={CONTACT_MAILTO} className="btn">Contact us at {CONTACT_EMAIL}</a></div></div></section>
     <section className="section container"><SectionHeader title="Community" text="Follow Ignishers and join the conversation on our official channels." /><SocialGrid /></section>
     <section className="section container"><SectionHeader title="Latest articles" />
       {posts.length ? <div className="grid g3">{posts.slice(0, 3).map(p => <BlogCard key={p.slug} post={p} />)}</div> : <BlogEmpty />}
