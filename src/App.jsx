@@ -6,7 +6,13 @@ const Projects = lazy(() => import('./pages/Projects.jsx')), ProjectDetails = la
 const Contribute = lazy(() => import('./pages/Contribute.jsx')), Community = lazy(() => import('./pages/Community.jsx'))
 const Docs = lazy(() => import('./pages/Docs.jsx')), Blog = lazy(() => import('./pages/Blog.jsx'))
 const BlogPost = lazy(() => import('./pages/BlogPost.jsx')), NotFound = lazy(() => import('./pages/NotFound.jsx'))
-function ScrollTop() { const { pathname } = useLocation(); useEffect(() => window.scrollTo(0, 0), [pathname]); return null }
+function ScrollTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 export default function App() {
   return (<><ScrollTop /><Suspense fallback={<div className="container page" aria-busy="true" />}>
     <Routes><Route element={<MainLayout />}>
