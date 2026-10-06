@@ -6,9 +6,9 @@ import { StatusBadge } from '../components/ProjectCard.jsx'
 import { projects } from '../data/projects.js'
 export default function ProjectDetails() {
   const p = projects.find(x => x.slug === useParams().slug)
-  if (!p) return (<div className="container page"><Seo title="Project not found" /><div className="empty"><h1 className="h3">Project not found</h1><p className="muted">No project exists at this address.</p><Link className="btn primary" to="/projects">Browse all projects</Link></div></div>)
+  if (!p) return (<div className="container page"><Seo title="Project not found — Ignishers" noindex /><div className="empty"><h1 className="h3">Project not found</h1><p className="muted">No project exists at this address.</p><Link className="btn primary" to="/projects">Browse all projects</Link></div></div>)
   const archived = p.status === 'Archived'
-  return (<div className="container page"><Seo title={p.name} description={p.description} />
+  return (<div className="container page"><Seo title={`${p.name} — Ignishers`} description={p.description} />
     <Link to="/projects" className="textlink"><ArrowLeft size={16} /> All projects</Link>
     <div className="detail-head"><div><div className="row gap wrap"><h1>{p.name}</h1><StatusBadge status={p.status} /></div>
       <p className="lead">{p.description}</p><ul className="chips">{p.technologies.map(t => <li key={t}>{t}</li>)}</ul>

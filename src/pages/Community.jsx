@@ -3,7 +3,7 @@ import SectionHeader from '../components/SectionHeader.jsx'
 import SocialGrid from '../components/SocialGrid.jsx'
 import { guidelines, areas } from '../data/content.js'
 export default function Community() {
-  return (<div className="container page"><Seo title="Community" description="Join the Ignishers community." />
+  return (<div className="container page"><Seo title="Community — Ignishers" description="Connect with Ignishers, follow the official channels, and participate in an open technology and cybersecurity community." />
     <SectionHeader as="h1" title="Join Ignishers" text="Follow our official channels, contribute to projects, and share what you learn." />
     <SocialGrid />
     <h2 className="h3" style={{ margin: '44px 0 16px' }}>Ways to participate</h2>

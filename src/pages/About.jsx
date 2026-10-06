@@ -9,7 +9,7 @@ const blocks = [
 ]
 const focus = ['Open-source software', 'Cybersecurity', 'Security research', 'Developer tools', 'Technical learning', 'Collaboration', 'Knowledge sharing']
 export default function About() {
-  return (<div className="container page"><Seo title="About" description="Learn about Ignishers, an open-source technology and cybersecurity community." />
+  return (<div className="container page"><Seo title="About Ignishers — Open Source & Cybersecurity Community" description="Learn about Ignishers, an open-source technology and cybersecurity community focused on building, security, and shared knowledge." />
     <SectionHeader as="h1" title="About Ignishers" text="Open-source technology, cybersecurity, research and learning." />
     <div className="grid g2">{blocks.map(([t, d]) => <section className="card pad" key={t}><h2 className="h3">{t}</h2><p className="muted">{d}</p></section>)}</div>
     <h2 className="h3" style={{ margin: '40px 0 14px' }}>Focus areas</h2>

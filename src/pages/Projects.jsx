@@ -10,7 +10,7 @@ export default function Projects() {
     (!cat || p.category === cat) && (!tech || p.technologies.includes(tech)) && (!st || p.status === st) &&
     (!q || (p.name + p.description + p.technologies.join(' ')).toLowerCase().includes(q.toLowerCase()))), [q, cat, tech, st])
   const Sel = ({ label, v, set, opts }) => <label className="field">{label}<select value={v} onChange={e => set(e.target.value)}><option value="">All</option>{opts.map(o => <option key={o}>{o}</option>)}</select></label>
-  return (<div className="container page"><Seo title="Projects" description="Projects from the Ignishers open-source portfolio." />
+  return (<div className="container page"><Seo title="Projects — Ignishers" description="Explore open-source software and developer tools from the Ignishers project portfolio." />
     <SectionHeader as="h1" title="Projects" text="Software from the Ignishers portfolio." />
     <div className="filters">
       <label className="field grow">Search<input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder="Search projects" /></label>
